@@ -17,6 +17,7 @@ var app = {
             $('body').on('touchstart', 'a', function(event) {
                 event.preventDefault();
                 $(event.target).addClass('tappable-active');
+                return false;
             });
             $('body').on('touchend', 'a', function(event) {
                 $(event.target).removeClass('tappable-active');
