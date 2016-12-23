@@ -12,8 +12,8 @@ var EmployeeView = function(employee) {
 
 	this.addLocation = function(event) {
 	    event.preventDefault();
-	    console.log('addLocation');
 	    if ("geolocation" in navigator) {
+	    	console.log('addLocation');
 		    navigator.geolocation.getCurrentPosition(
 		        function(position) {
 		        	console.log('succeed 1');
