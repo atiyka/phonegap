@@ -15,9 +15,7 @@ var app = {
         if (document.documentElement.hasOwnProperty('ontouchstart')) {
             // ... if yes: register touch event listener to change the "selected" state of the item
             $('body').on('touchstart', 'a', function(event) {
-                event.preventDefault();
                 $(event.target).addClass('tappable-active');
-                return false;
             });
             $('body').on('touchend', 'a', function(event) {
                 $(event.target).removeClass('tappable-active');
