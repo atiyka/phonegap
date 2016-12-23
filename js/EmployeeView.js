@@ -20,10 +20,9 @@ var EmployeeView = function(employee) {
 		            $('.location', this.el).html(position.coords.latitude + ', ' + position.coords.longitude);
 		            console.log('succeed 2');
 		        },
-		        function() {
-		        	console.log('fail 1');
+		        function(error) {
+		        	console.log(error.message);
 		            app.showAlert('Error getting location', 'Error');
-		            console.log('fail 2');
 		        });
 		} else {
 			app.showAlert('Location not supported', 'Error');
